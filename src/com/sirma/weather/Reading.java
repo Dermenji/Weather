@@ -10,14 +10,6 @@ public class Reading {
     private String measurement;
     private int values;
 
-    public Reading(String dateTime, String city, String readingType, String measurement, int values) {
-        setDateTime(dateTime);
-        setCity(city);
-        setReadingType(readingType);
-        setMeasurement(measurement);
-        setValues(values);
-    }
-
     public String getDateTime() {
         return dateTime;
     }
