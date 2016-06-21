@@ -1,8 +1,6 @@
 package com.sirma.weather;
 
-/**
- * Created by Alex on 6/21/2016.
- */
+
 public class Reading {
     private String dateTime;
     private String city;

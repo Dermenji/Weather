@@ -1,11 +1,13 @@
 package com.sirma.weather;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 
 public class WeatherData {
-
     private ReadingDAO dao;
 
-    public void importData(String file){
+    public void setMeasurements(String file) {
         Reading read = new Reading();
         read.setDateTime();
         read.setCity();
@@ -16,6 +18,13 @@ public class WeatherData {
         dao.addReading(read);
     }
 
+    public List<Reading> getReadings() {
+        return dao.getReadings();
+    }
+
+    public List<Reading> getReadingsByCity(String city) {
+        return getReadings().stream().filter(r -> r.getCity().equals(city)).collect(Collectors.toList());
+    }
 
 
 }
