@@ -7,17 +7,6 @@ import java.util.stream.Collectors;
 public class WeatherData {
     private ReadingDAO dao;
 
-    public void setMeasurements(String file) {
-        Reading read = new Reading();
-        read.setDateTime();
-        read.setCity();
-        read.setMeasurement();
-        read.setReadingType();
-        read.setValues();
-
-        dao.addReading(read);
-    }
-
     public List<Reading> getReadings() {
         return dao.getReadings();
     }
@@ -26,5 +15,9 @@ public class WeatherData {
         return getReadings().stream().filter(r -> r.getCity().equals(city)).collect(Collectors.toList());
     }
 
+    public void getMaxTemperatureByCity(String city) {
+    }
 
+    public void getTemperatureValuesByCity(String city) {
+    }
 }
